@@ -3,6 +3,13 @@
 <div class="row">
     <div class="col-12 border mt-5">
         <h3 class="text-center mt-3">Login Page</h3>
+
+        @if(Session::has('error'))
+        <div class="alert alert-danger">
+            {{Session::get('error')}}
+        </div>
+        @endif
+
         <form action="{{ route('loginpage') }}" method="post">
             @csrf
             <div class="form-group">
