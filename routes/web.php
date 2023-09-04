@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CustomController::class,"index"]);
+Route::get('/', [CustomController::class,"index"])->name("login");
+Route::post("/loginpage",[CustomController::class,"loginpage"])->name("loginpage");
+Route::get("/register",[CustomController::class,"register"])->name("register");
+Route::post("/registerpage",[CustomController::class,"registerpage"])->name("registerpage");
